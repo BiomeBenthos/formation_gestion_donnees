@@ -1,0 +1,8 @@
+project:
+  title: "Formation gestion de données"
+
+format:
+  revealjs: 
+    menu: false
+    progress: false
+    incremental: true

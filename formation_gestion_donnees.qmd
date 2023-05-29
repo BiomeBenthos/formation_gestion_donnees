@@ -1,0 +1,669 @@
+---
+title: "Les bonnes pratiques de gestion de données"
+author: Vincent Bellavance
+date: last-modified
+date-format: long
+lang: fr
+format: 
+  revealjs:
+    css: styles.css
+    theme: simple
+---
+
+![](img/goal1.svg)
+
+---
+
+![](img/goal2.svg)
+
+---
+
+![](img/goal3.svg)
+
+---
+
+![](img/goal4.svg)
+
+---
+
+<br>
+<br>
+<br>
+
+[Observatoire globale du Saint-Laurent](https://ogsl.ca/fr/accueil/)
+
+<br>
+<br>
+
+[Biodiversité-Québec](https://biodiversite-quebec.ca/fr/atlas?mapCenter=55%2C-72&scale=Nombre+d%27observations&region_type=hex&group=Toutes+les+esp%C3%A8ces&id=19&minyear=1950&maxyear=2022&mapZoom=5)
+
+---
+
+![](img/present1.svg)
+
+---
+
+![](img/present2.svg)
+
+---
+
+![](img/present3.svg)
+
+---
+
+![](img/present4.svg)
+
+---
+
+![](img/present5.svg)
+
+---
+
+![](img/missing_data_title.png){fig-align="left" width=60%}
+
+---
+
+![](img/missing_data_title.png){fig-align="left" width=60%}
+
+![](img/missing_data_vines.png){.absolute top=100 left=225 width=60%}
+
+::: footer
+Vines *et al.* 2013
+:::
+
+---
+
+:::: {.columns .incremental}
+
+::: {.column width="47.5%"}
+
+<br>
+
+### Métadonnées
+
+<br>
+
+- **Trouver** le jeu de données dans un [catalogue](https://catalogue.ogsl.ca/fr/)
+
+- **Comprendre** le jeu de données
+
+:::
+
+::: {.column width="5%" .nonincremental}
+:::
+
+::: {.column width="47.5%"}
+
+<br>
+
+### Gestion des données
+
+<br>
+
+- **Données** récoltées sur le **terrain**
+
+- **Formats et noms** des fichiers
+
+- **Structure** des données
+
+:::
+
+::::
+
+---
+
+![](img/sb_metadata.png){fig-align="center" width=120%}
+
+---
+
+## Métadonnées
+
+<br>
+
+**Quoi?**
+
+::: {.incremental}
+
+- Titre
+
+- Description du jeu de données
+
+- Type de fichier
+
+- [Dictionnaire des données](https://catalogue.ogsl.ca/fr/dataset/ca-cioos_b878849c-c9c2-401d-88a7-ee6bbb65b6d7)
+
+:::
+
+---
+
+## Métadonnées
+
+<br>
+
+:::: {.columns .incremental}
+
+::: {.column width="50%"}
+
+**Où?**
+
+::: {.incremental}
+
+- Couverture spatiale
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: {.incremental}
+
+**Quand?**
+
+- Couverture temporelle
+
+- Fréquence de mise à jour
+
+:::
+
+:::
+
+::::
+
+---
+
+## Métadonnées
+
+<br>
+
+**Comment?**
+
+::: {.incremental}
+
+- Type de collecte(s)
+
+- Protocole(s)
+
+:::
+
+---
+
+## Métadonnées
+
+<br>
+
+**Qui?**
+
+::: {.incremental}
+
+- Créateur(s) du jeu de données
+
+- Contributeur(s) au jeu de données
+
+- Contact(s)
+
+- Droits intellectuels (+ license)
+
+:::
+
+---
+
+## Métadonnées
+
+![](img/license.png){fig-align="center"}
+
+::: footer
+University of Edinburgh open Educational Resources
+:::
+
+---
+
+## Métadonnées
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+<br>
+<br>
+<br>
+
+[Datacite Metadata Generator](https://doranum.fr/wp-content/uploads/datacite_metadata_generator_4.0.html)
+
+:::
+
+::: {.column width="50%"}
+
+![](img/datacite.png)
+
+:::
+
+::::
+
+---
+
+## Gestion des données
+
+<br>
+
+![](img/dirty_clean.png)
+
+---
+
+## Gestion des données
+
+**Données récoltées sur le terrain**
+
+*Spatiales*
+
+::: {.incremental}
+
+- **latitude (decimal_latitude)**
+
+- **longitude (decimal_longitude)**
+
+- système de référence des coordonnées (geodetic_datum)
+
+- profondeur (depth)
+
+- nom du site (site)
+
+- **nom de la station (station)**
+
+:::
+
+---
+
+![](img/without_latlon.png)
+
+---
+
+![](img/nogodpleaseno.gif){fig-align="center"}
+
+---
+
+## Gestion des données
+
+**Données récoltées sur le terrain**
+
+*Temporelles*
+
+::: {.incremental}
+
+- date (event_date): YYYY-MM-DD
+
+- heure, si nécessaire (event_time): HH:mm:ss
+
+:::
+
+---
+
+## Gestion des données
+
+**Données récoltées sur le terrain**
+
+*Taxonomiques*
+
+::: {.incremental}
+
+- Nom latin (scientific_name)
+
+- Aucun nom vernaculaire
+
+:::
+
+---
+
+## Gestion des données
+
+**Données récoltées sur le terrain**
+
+*Environnementales*
+
+::: {.incremental}
+
+- [CF Standard Name](http://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html)
+
+:::
+
+---
+
+## Gestion des données
+
+**Données récoltées sur le terrain**
+
+*Méthodes*
+
+::: {.incremental}
+
+- Protocole utilisé (sampling_protocol)
+
+- Effort d'échantillonnage (sampling_effort)
+
+:::
+
+---
+
+## Gestion des données
+
+**Données récoltées sur le terrain**
+
+*Identifiants*
+
+::: {.incremental}
+
+- Jeu de données (dataset_id)
+
+- Événement (event_id) et identifiant qui les regroupe (parent_event_id)
+
+- Échantillon de matériel (material_sample_id)
+
+- Occurrence d'une espèce (occurrence_id)
+
+- Mesures (measurement_id)
+
+:::
+
+---
+
+## Gestion des données
+
+**Données récoltées sur le terrain**
+
+*Commentaires*
+
+::: {.incremental}
+
+- Laisser les commentaires dans une seule colonnes
+
+:::
+
+---
+
+## Gestion des données
+
+**Structure des données**
+
+::: {.incremental}
+
+- Les noms de colonnes sur **une seule ligne**
+
+- **Aucun espace et accent** dans les noms de colonnes
+
+- Mettre les **unités dans le nom de la colonne** entre parenthèse (p.ex. depth_(m))
+
+- Une ligne = Une observation (**format long**)
+
+- Une seule table par type de données (biodiversité, granulo, etc.)
+
+:::
+
+---
+
+## Gestion des données
+
+**Format large**
+
+```{r}
+#| echo: false
+#| fig-align: center
+a <- read.csv("wide.csv")
+knitr::kable(a)
+```
+
+![](img/no.png){.absolute top=225 left=-50 width=10%}
+
+---
+
+## Gestion des données
+
+**Format long**
+
+```{r}
+#| echo: false
+#| fig-align: center
+a <- read.csv("long.csv")
+knitr::kable(a)
+```
+
+![](img/yes.svg){.absolute top=225 left=-50 width=12%}
+
+---
+
+## Gestion des données
+
+**Format des fichiers**
+
+Le format des fichiers a des implications importantes:
+
+::: {.incremental}
+
+- Permet de réutiliser les données dans le futur:
+
+  - Exemple: les fichiers .xlsx ne peuvent être ouverts avec des vielles versions d'Excel
+
+- Les **formats de fichiers ouverts** permettent de lire des données peu importe le système (Windows, Mac, Linux)
+
+:::
+
+---
+
+## Gestion des données
+
+**Données tabulaires**
+
+::: {.incremental}
+
+- **.csv:** Comma separated values
+
+- Peut être ouvert par Excel, R ou n'importe quel éditeur de texte
+
+:::
+
+---
+
+## Gestion des données
+
+**Données tabulaires**
+
+![](img/csv.png){width="70%" height="70%" fig-align="center"}
+
+---
+
+## Gestion des données
+
+**Données géographiques**
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Polygones
+
+- Points
+
+- Raster
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+![](img/env_bathy.png)
+
+:::
+
+::::
+
+---
+
+## Gestion des données
+
+**Données géographiques**
+
+::: {.incremental}
+
+- **.gpkg:** GeoPackage
+
+- Format ouvert
+
+- 1 seul fichier (comparé au Shapefile)
+
+:::
+
+---
+
+## Gestion des données
+
+**Nom de fichier**
+
+::: {.incremental}
+
+- Aucun caractère spécial
+
+- Aucun espace
+
+- Permet d'être reconnu par tous les logiciels et les systèmes d'opérations
+
+:::
+
+---
+
+## Gestion des données
+
+**Nom de fichier**
+
+::: {.incremental}
+
+- **Constant et explicite** dans les noms de fichier
+
+- Utiliser des **"_" ou "-"** pour séparer les parties du nom
+
+  - Nom du projet
+
+  - Site d'échantillonnage
+  
+  - Type de données/variables
+
+  - Date (YYYY-MM-DD, ou année seulement si plusieurs jours d'échantillonnage)
+
+- Exemple: **Amundsen_2023_leg2_granulo.csv**
+
+:::
+
+---
+
+## Gestion des données
+
+**Nom de fichier**
+
+::: {.incremental}
+
+- **Ne pas modifier** le fichier de **données brutes**
+
+- Travail sur Excel: faire une **copie du fichier** de données brutes sur laquelle faire les analyses
+
+- Travail sur R ou Python: faire les corrections et analyses dans un **script**
+
+:::
+
+---
+
+<br>
+
+![](img/pipeline1.svg){fig-align="center"}
+
+---
+
+<br>
+
+![](img/pipeline3.svg){fig-align="center"}
+
+---
+
+<br>
+
+![](img/pipeline2.svg){fig-align="center"}
+
+
+# Implémenter les bonnes pratiques
+
+---
+
+## Métadonnées
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Court terme**
+
+::: {.incremental}
+
+- Doranum
+
+- Template fichier excel
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+**Moyen terme**
+
+::: {.incremental}
+
+- Application sur le web
+
+- Plus spécifique que Doranum 
+
+:::
+
+:::
+
+::::
+
+---
+
+## Gestion données
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Court terme**
+
+::: {.incremental}
+
+- Faire des fichiers .csv avec un langage contrôlé
+
+- Liste de noms standards pour le labo
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+**Moyen terme**
+
+::: {.incremental}
+
+- Tablettes
+
+- Portail pour déposer jeux de données
+
+:::
+
+:::
+
+::::
+
+# Questions?

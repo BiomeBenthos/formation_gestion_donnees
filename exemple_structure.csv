@@ -1,0 +1,4 @@
+"","dataset_id","parent_event_id","station_id","eventid","event_date","decimal_longitude","decimal_latitude","geodetic_datum","sand_cover","vegetation_cover","sampling_protocol","material_sample_id_granulo","material_sample_id_om"
+"1","pao","pao-2023","pao-2023-ree-pr-50","pao-2023-ree-pr-50-1",2023-06-07,-68.45,49.0567,"epsg:4326",100,0,"carottier","pao-2023-ree-pr-50-1-sed","pao-2023-ree-pr-50-1-mo"
+"2","pao","pao-2023","pao-2023-ree-pr-50","pao-2023-ree-pr-50-2",2023-06-07,-68.43,49.04,"epsg:4326",30,70,"benne","pao-2023-ree-pr-50-2-sed","pao-2023-ree-pr-50-2-mo"
+"3","pao","pao-2023","pao-2023-reo-mo-75","pao-2023-reo-mo-75-1",2023-06-07,-68.3987547,49.05643,"epsg:4326",100,0,"un_quart","pao-2023-reo-mo-75-1-sed","pao-2023-reo-mo-75-1-mo"
